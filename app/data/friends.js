@@ -1,7 +1,7 @@
 const possibleFriends = [
     {
-        "name": "Ahmed",
-        "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "name": "Robert Pierce",
+        "photo": "https://avatars0.githubusercontent.com/u/20098958?s=460&v=4",
         "scores": [
             5,
             1,

@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Friend Finder</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://use.fontawesome.com/29dd9c489d.js"></script>
     <script src="https://kit.fontawesome.com/80691335c3.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -174,7 +174,7 @@
                     <h4 class="modal-title">Your Friend Match</h4>
                 </div>
                 <div class="modal-body">
-                    <h2 class="matchName"></h2>
+                    <h2 id="matchName"></h2>
                     <img id="matchImg" src="" style="width: 350px;">
                 </div>
                 <div class="modal-footer">
@@ -189,86 +189,65 @@
                     href="https://github.com/pierceforfears/FriendFinder" target="_blank">GitHub Repo</a></p>
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <!-- <script src="./js/survey.js"></script> -->
     <script type="text/javascript">
 
         $("#submit").on("click", function (event) {
             event.preventDefault();
             // Form validation
-            function validateForm() {
-                let isValid = true;
-                $(".form-control").each(function () {
-                    if ($(this).val() === "") {
-                        isValid = false;
-                    }
-                });
-                $(".select").each(function () {
-                    if ($(this).val() === "") {
-                        isValid = false;
-                    }
-                });
-                return isValid;
-            }
-
-            if (validateForm() === true) {
-                let newFriend = {
-                    name: $("#name").val().trim(),
-                    photo: $("#photo").val().trim(),
-                    scores: [
-                        $("#question1").val(),
-                        $("#question2").val(),
-                        $("#question3").val(),
-                        $("#question4").val(),
-                        $("#question5").val(),
-                        $("#question6").val(),
-                        $("#question7").val(),
-                        $("#question8").val(),
-                        $("#question9").val(),
-                        $("#question10").val()
-                    ]
-                };
-                // AJAX post the data to the friends API.
-                $.post("/api/friends", newFriend, function (data) {
-
-                    // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-                    $("#matchName").text(data.name);
-                    $("#matchImg").attr("src", data.photo);
-
-                    // Show the modal with the best match
-                    $("#resultsModal").modal("toggle");
-
-                });
-            } else {
-                alert("Please fill out all fields before submitting!");
-            }
-
-            //     $.post("api/friends", newFriend)
-            //         .then(function (data) {
-            //             console.log("survey.html", data);
-            //             alert("Adding friend...")
-            //         });
-
-
-
-            //     $("#name").val("");
-            //     $("#photo").val("");
-            //     $("#question1").val("");
-            //     $("#question2").val("");
-            //     $("#question3").val("");
-            //     $("#question4").val("");
-            //     $("#question5").val("");
-            //     $("#question6").val("");
-            //     $("#question7").val("");
-            //     $("#question8").val("");
-            //     $("#question9").val("");
-            //     $("#question10").val("");
-            // } else {
-            //     alert("Please complete all fields.")
+            // function validateForm() {
+            //     let isValid = true;
+            //     $(".form-control").each(function () {
+            //         if ($(this).val() === "") {
+            //             isValid = false;
+            //         }
+            //     });
+            //     $(".select").each(function () {
+            //         if ($(this).val() === "") {
+            //             isValid = false;
+            //         }
+            //     });
+            //     return isValid;
             // }
 
+            // if (validateForm() === true) {
+            let newFriend = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                scores: [
+                    $("#question1").val(),
+                    $("#question2").val(),
+                    $("#question3").val(),
+                    $("#question4").val(),
+                    $("#question5").val(),
+                    $("#question6").val(),
+                    $("#question7").val(),
+                    $("#question8").val(),
+                    $("#question9").val(),
+                    $("#question10").val()
+                ]
+            };
+            // AJAX post the data to the friends API.
+            $.post("/api/friends", newFriend, function (data) {
 
+                // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                $("#matchName").text(data.name);
+                $("#matchImg").attr("src", data.photo);
 
+                // Show the modal with the best match
+                $("#resultsModal").modal('toggle');
 
+            });
+            // } else {
+            //     alert("Please fill out all fields before submitting!");
+            // }
 
 
         });
