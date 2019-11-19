@@ -49,6 +49,7 @@ module.exports = function (app) {
                 bestFriend = i;
             }
         }
+
         // ...the JSON is pushed to the appropriate JavaScript array
         possibleFriends.push(newFriend);
         //json best friend to the current friend match array
