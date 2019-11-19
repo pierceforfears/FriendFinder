@@ -10,11 +10,11 @@ module.exports = function (app) {
     // API POST Requests
     // Below code handles when a user submits a form and thus submits data to the server.
     // In each of the below cases, when a user submits form data (a JSON object)
-    // ...the JSON is pushed to the appropriate JavaScript array
+
     app.post("/api/friends", function (req, res) {
 
         let newFriend = req.body;
-
+        // score loop
         for (let i = 0; i < newFriend.scores.length; i++) {
             if (newFriend.scores[i] === "1 (Strongly Disagree)") {
                 newFriend.scores[i] = 1;
@@ -24,14 +24,16 @@ module.exports = function (app) {
                 newFriend.scores[i] = parseInt(newFriend.scores[i]);
             }
         }
-
+        // array for comparison
         let comparisonArray = [];
 
         for (let i = 0; i < possibleFriends.length; i++) {
             let comparedFriend = possibleFriends[i];
+            // calculate the total difference
             let totalDifference = 0;
 
             for (let j = 0; j < comparedFriend.scores.length; j++) {
+                //return the absolute value of a number *use abs()method
                 let differenceOneScore = Math.abs(comparedFriend.scores[j] - newFriend.scores[j]);
                 totalDifference += differenceOneScore;
             }
@@ -47,28 +49,12 @@ module.exports = function (app) {
                 bestFriend = i;
             }
         }
-
+        // ...the JSON is pushed to the appropriate JavaScript array
         possibleFriends.push(newFriend);
+        //json best friend to the current friend match array
         res.json(possibleFriends[bestFriend]);
-
-
-
-        // newFriend.routeName = newFriend.name.replace(/\s+/g, "").toLowerCase();
-
-        // console.log(newFriend);
-
-        // friends.push(newFriend)
-
-        // res.json(newFriend);
 
     });
 
-    // app.post("/api/clear", function (req, res) {
-    //     //Empty out the arrays of data
-    //     possibleFriends.length = 0;
-
-    //     res.json({ ok: true });
-
-    // });
 }
 
