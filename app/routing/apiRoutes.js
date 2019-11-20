@@ -32,6 +32,16 @@ module.exports = function (app) {
             // calculate the total difference
             let totalDifference = 0;
 
+            let bestFriendNum = comparisonArray[0];
+            let bestFriend = 0;
+
+            for (let i = 1; i < comparisonArray.length; i++) {
+                if (comparisonArray[i] < bestFriendNum) {
+                    bestFriendNum = comparisonArray[i];
+                    bestFriend = i;
+                }
+            }
+
             for (let j = 0; j < comparedFriend.scores.length; j++) {
                 //return the absolute value of a number *use abs()method
                 let differenceOneScore = Math.abs(comparedFriend.scores[j] - newFriend.scores[j]);
