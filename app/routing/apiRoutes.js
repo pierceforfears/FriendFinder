@@ -40,6 +40,7 @@ module.exports = function (app) {
             comparisonArray[i] = totalDifference;
         }
 
+
         let bestFriendNum = comparisonArray[0];
         let bestFriend = 0;
 
@@ -49,6 +50,7 @@ module.exports = function (app) {
                 bestFriend = i;
             }
         }
+
 
         // ...the JSON is pushed to the appropriate JavaScript array
         possibleFriends.push(newFriend);
