@@ -5,20 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Friend Finder</title>
+    <title>Dr. Leo Spaceman's Fun Friend Finder</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://use.fontawesome.com/29dd9c489d.js"></script>
     <script src="https://kit.fontawesome.com/80691335c3.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-image: url("../assets/alex-howell-C4u2oKfclhs-unsplash.jpg");
+        }
 
+        .jumbotron {
+            opacity: .9;
+            padding-bottom: 30px;
+        }
+
+        p,
+        label {
+            color: #fff;
+        }
+
+        .form-control {
+            opacity: .5;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <div class="jumbotron">
-            <h1>Survey Questions</h1>
+            <h1>Dr. Leo Spaceman's Super-Scientific Survey</h1>
             <hr>
             <h2>About You</h2>
             <h5>Name (Required)</h5>
@@ -29,8 +47,8 @@
         </div>
         <div class="form-group">
             <label for="question1" class="font-weight-bold">Question 1</label>
-            <p>Your mind is always buzzing with unexplored ideas and plans.</p>
-            <select class="form-control" id="question1">
+            <p>Science is... whatever we want it to be.</p>
+            <select class="form-control col-lg-3" id="question1">
                 <option></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -41,9 +59,9 @@
         </div>
         <div class="form-group">
             <label for="question2" class="font-weight-bold">Question 2</label>
-            <p>Generally speaking, you rely more on your experience than your imagination.
+            <p>I pretty much do whatever Oprah tells me to do.
             </p>
-            <select class="form-control" id="question2">
+            <select class="form-control col-lg-3" id="question2">
                 <option></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -54,9 +72,9 @@
         </div>
         <div class="form-group">
             <label for="question3" class="font-weight-bold">Question 3</label>
-            <p>You find it easy to stay relaxed and focused even when there is some pressure.
+            <p>There are no bad ideas. Just good ideas that go horribly wrong.
             </p>
-            <select class="form-control" id="question3">
+            <select class="form-control col-lg-3" id="question3">
                 <option></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -67,9 +85,9 @@
         </div>
         <div class="form-group">
             <label for="question4" class="font-weight-bold">Question 4</label>
-            <p>You rarely do something just out of sheer curiosity.
+            <p>I want to go to there.
             </p>
-            <select class="form-control" id="question4">
+            <select class="form-control col-lg-3" id="question4">
                 <option></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -80,9 +98,10 @@
         </div>
         <div class="form-group">
             <label for="question5" class="font-weight-bold">Question 5</label>
-            <p>People can rarely upset you.
+            <p>Factories provide three things this country desperately needs: jobs, pride, and material for Bruce
+                Springsteen songs.
             </p>
-            <select class="form-control" id="question5">
+            <select class="form-control col-lg-3" id="question5">
                 <option></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -93,9 +112,9 @@
         </div>
         <div class="form-group">
             <label for="question6" class="font-weight-bold">Question 6</label>
-            <p>It is often difficult for you to relate to other people’s feelings.
+            <p>Your new vibe is a double edged sword, much like the one Mickey Rourke tried to kill me with.
             </p>
-            <select class="form-control" id="question6">
+            <select class="form-control col-lg-3" id="question6">
                 <option></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -106,9 +125,9 @@
         </div>
         <div class="form-group">
             <label for="question7" class="font-weight-bold">Question 7</label>
-            <p>In a discussion, truth should be more important than people’s sensitivities.
+            <p>Only a farmer would not be wearing a tuxedo after 6pm.
             </p>
-            <select class="form-control" id="question7">
+            <select class="form-control col-lg-3" id="question7">
                 <option></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -119,9 +138,9 @@
         </div>
         <div class="form-group">
             <label for="question8" class="font-weight-bold">Question 8</label>
-            <p>You rarely get carried away by fantasies and ideas.
+            <p>I can only eat paper, but I can eat as much paper as I want.
             </p>
-            <select class="form-control" id="question8">
+            <select class="form-control col-lg-3" id="question8">
                 <option></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -132,10 +151,10 @@
         </div>
         <div class="form-group">
             <label for="question9" class="font-weight-bold">Question 9</label>
-            <p>You think that everyone’s views should be respected regardless of whether they are supported by facts or
-                not.
+            <p>I do admire Wonka. He is a true capitalist. His factory has zero government regulation, slave labor, and
+                an indoor boat. Wonderful.
             </p>
-            <select class="form-control" id="question9">
+            <select class="form-control col-lg-3" id="question9">
                 <option></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -146,9 +165,10 @@
         </div>
         <div class="form-group">
             <label for="question10" class="font-weight-bold">Question 10</label>
-            <p>You feel more energetic after spending time with a group of people.
+            <p>I want to roll my eyes right now, but the doctor says that if I keep doing it, my ocular muscles might
+                spasm and eject my eyeballs.
             </p>
-            <select class="form-control" id="question10">
+            <select class="form-control col-lg-3" id="question10">
                 <option></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
