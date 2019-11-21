@@ -39,12 +39,12 @@ The result will display both the name and picture of the closest match.
 
 ### Home Page
 
-![Screen Shot 2019-11-20 at 5 12 28 PM](https://user-images.githubusercontent.com/20098958/69283108-c890a780-0bb9-11ea-95b0-16ab1fc99ae7.png)
+![Screen Shot 2019-11-20 at 8 47 55 PM](https://user-images.githubusercontent.com/20098958/69299483-a3626000-0bde-11ea-939b-c484b3f3db11.png)
 
 ### Survey Page
 
-![Screen Shot 2019-11-20 at 5 16 12 PM](https://user-images.githubusercontent.com/20098958/69283117-cdedf200-0bb9-11ea-8859-c8c344d564ee.png)
+![Screen Shot 2019-11-20 at 9 10 14 PM](https://user-images.githubusercontent.com/20098958/69299484-a3626000-0bde-11ea-8dc7-9fd858498d28.png)
 
 ### Results Modal
 
-![Screen Shot 2019-11-20 at 5 15 53 PM](https://user-images.githubusercontent.com/20098958/69283118-cdedf200-0bb9-11ea-9ad4-83e0b4ddbf76.png)
+![Screen Shot 2019-11-20 at 9 41 56 PM](https://user-images.githubusercontent.com/20098958/69299485-a3626000-0bde-11ea-88f5-a70cb1b69c3a.png)
