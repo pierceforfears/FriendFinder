@@ -1,6 +1,6 @@
-# FriendFinder
+# Dr. Leo Spaceman's Scientific Friend Finder
 
-FriendFinder is a compatibility-based "FriendFinder" application -- basically a dating app. This full-stack site will take in results from a user survey of 10 questions.  Each answer is on a scale of 1 to 5 based on how much the user agrees or disagrees with the question. After the form is sumitted, the scores are compared with those from other users. The app will then display the name and picture of the user with the best overall match.
+Dr. Leo Spaceman's Scientific Friend Finder is a compatibility-based "FriendFinder" application -- basically a dating app. This full-stack site will take in results from a user survey of 10 questions.  Each answer is on a scale of 1 to 5 based on how much the user agrees or disagrees with the question. After the form is sumitted, the scores are compared with those from other users. The app will then display the name and picture of the user with the best overall match.
 
 ## Preview Site
 
@@ -17,7 +17,7 @@ https://funfriendfinder.herokuapp.com/
 
 ## Technical details
 
-FriendFinder uses Express to handle routing.
+Dr. Leo Spaceman's Scientific Friend Finder uses Express to handle routing.
 
 The server.js file uses the npm packages: express, body-parser, path.
 
