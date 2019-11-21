@@ -12,15 +12,36 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://use.fontawesome.com/29dd9c489d.js"></script>
     <script src="https://kit.fontawesome.com/80691335c3.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Oswald&display=swap" rel="stylesheet">
     <style>
         body {
             background-image: url("https://i.imgur.com/nW1spDY.jpg");
             background-color: rgb(92, 92, 92);
+            font-family: 'Oswald', sans-serif;
+        }
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            font-size: 70px;
+            text-align: center;
+        }
+
+        .greyText {
+            color: #777777;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 90px;
+        }
+
+        .orangeText {
+            color: orange;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 90px;
         }
 
         .jumbotron {
             opacity: .9;
-            padding-bottom: 30px;
+            padding-bottom: 10px;
         }
 
         p,
@@ -37,7 +58,9 @@
 <body>
     <div class="container">
         <div class="jumbotron">
-            <h1>Dr. Leo Spaceman's Super-Scientific Survey</h1>
+            <h1>Dr. Leo Spaceman's </h1>
+            <h1>Scientific Survey</h1>
+            <h1 class="small">(I want to go to there... to find my friends.)</h1>
             <hr>
             <h2>About You</h2>
             <h5>Name (Required)</h5>
@@ -86,7 +109,7 @@
         </div>
         <div class="form-group">
             <label for="question4" class="font-weight-bold">Question 4</label>
-            <p>I want to go to there.
+            <p>Hey, do I say the word "camera" weird? "Cam-er-rah". "Cam-er-rah". "Cam-er-rah".
             </p>
             <select class="form-control col-lg-3" id="question4">
                 <option></option>
